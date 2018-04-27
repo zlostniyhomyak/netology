@@ -38,7 +38,7 @@
     </dl>
     <dl>
         <dt>Адрес электронной почты</dt>
-        <dd><a href="mailto:shesternin@sph.kz"><?php echo $email; ?></a></dd>
+        <dd><a href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a></dd>
     </dl>
     <dl>
         <dt>Город</dt>
