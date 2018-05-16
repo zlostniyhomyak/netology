@@ -5,12 +5,12 @@ $json = json_decode($weather);
 $json2 = json_encode($json, JSON_PRETTY_PRINT);
 // var_dump($json2);
 if ($weather != null) {
-	$file = fopen("C:\\wamp64\\www\\Netology\\log.json", "w");
+	$file = fopen("http://university.netology.ru/u/shesterin/log.json", "w");
 	fwrite($file, $json2);
 	fclose($file);
 };
-$file2 = fopen("C:\\wamp64\\www\\Netology\\log.json", "r");
-$file3 = readfile("C:\\wamp64\\www\\Netology\\log.json");
+$file2 = fopen("http://university.netology.ru/u/shesterin/log.json", "r");
+$file3 = readfile("http://university.netology.ru/u/shesterin/log.json");
 // $array = file($file2);
 
 ?>
