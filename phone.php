@@ -1,28 +1,40 @@
 <?php
-$base = file_get_contents("http://university.netology.ru/u/shesterin/base.json");
+$base = file_get_contents("base.json");
 
 $table = json_decode($base, true);
 ?>
 
-<table>
 <style>
-	td{
-		border: 1px solid #000;
-	}
+ table { 
+        border-spacing: 0;
+        border-collapse: collapse;
+    }
+
+    table td, table th {
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    
+    table th {
+        background: #eee;
+    }
 </style>
 
-<?php
-foreach ($table as $value) {
-?>
+<table>
 
-	<tr>
-		<td style="">
-			<?=implode('<td>', $value); ?>
-		</td>
-	</tr>
+<?php
+	foreach ($table as $value) {
+?>
+<tr>
+	<?php 
+		echo "<td>{$value['firstName']}</td>";
+		echo "<td>{$value['lastName']}</td>";
+		echo "<td>{$value['address']}</td>";
+		echo "<td>{$value['phoneNumber']}</td>";
+	?>
+</tr>
 
 <?php
 }
 ?>
-
 </table>
